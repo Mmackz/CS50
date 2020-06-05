@@ -39,7 +39,7 @@ int main(void)
         wordCount--;
     }
 
-    // Average num of letters/setences per 100 words
+    // Average num of letters/sentences per 100 words
     float L = (float)letterCount / wordCount * 100;
     float S = (float)sentenceCount / wordCount * 100;
 
