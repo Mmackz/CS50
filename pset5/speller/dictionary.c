@@ -29,7 +29,7 @@ node *all_nodes = NULL;
 bool check(const char *word)
 {
     // Obtain a hash value for the word
-    int index = hash(word);
+    unsigned int index = hash(word);
 
     // Look up the value in the hash table by traversing the linked-list until its found or end of list(NULL)
     node *temp = table[index];
@@ -111,7 +111,7 @@ bool load(const char *dictionary)
         new_node->next = NULL;
 
         // Hash word to find what index to store word in the hashtable
-        int index = hash(word);
+        unsigned int index = hash(word);
 
         // Insert the word into the hash table
         if (table[index] == NULL)
