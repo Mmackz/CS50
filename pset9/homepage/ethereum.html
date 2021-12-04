@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptocurrency Charts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript" src="./javascript.js"></script>
+</head>
+<body>
+
+    <!-- Header will hold logo and sitename, navigation and fake social media links -->
+    <header style="background-color: #434875;">
+
+        <!-- Logo and title -->
+        <div class="logo">
+            <img src="./images/logo.png" alt="logo" height="50px" width="55px">
+            <h2>CryptoCharts</h2>
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Bitcoin</a></li>
+                    <li><a href="./ethereum.html" class="active">Ethereum</a></li>
+                    <li><a href="./litecoin.html">Litecoin</a></li>
+                    <li><a href="./dogecoin.html">Dogecoin</a></li>
+                </ul>
+            </nav>
+            <div class="social_media_links">
+                <!-- social media buttons (bootstrap?) -->
+                <a href="#"><img src="./images/twitter.png" alt="twitter" height="25px" width="25px"></a>
+                <a href="#"><img src="./images/facebook.svg" alt="facebook" height="25px" width="25px"></a>
+                <a href="#"><img src="./images/github.svg" alt="github" height="25px" width="25px"></a>
+
+            
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main content section-->
+    <main>
+        <div>
+            <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+            <div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="USD" data-secondary="" data-ticker="true" data-rank="false" data-marketcap="false" data-volume="false" data-statsticker="true" data-stats="USD"></div>
+            <!-- TradingView Widget BEGIN -->
+            <button onclick="darkMode('COINBASE:ETHUSD', 'tradingview_eca55')" type="button" id="dark_mode_button" class="btn btn-dark">Dark Mode</button>
+            <button onclick="lightMode('COINBASE:ETHUSD', 'tradingview_eca55')" type="button" class="btn btn-light">Light Mode</button>
+            <div class="tradingview-widget-container">
+                <div id="tradingview_eca55"></div>
+                <script type="text/javascript">lightMode("COINBASE:ETHUSD", "tradingview_eca55")</script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+
+        <div class="paragraph">
+            <img src="./images/ethereum.png" alt="ETH logo" align="left" height="100px" width="100px" style="margin-right: 25px;">        
+            <p>
+                Ethereum is a system on the Internet where people can make deals. Ether is type of money which uses the Ethereum system to make sure that every person gets the right amount in every deal.
+                Ethereum was proposed in late 2013 by Vitalik Buterin, a cryptocurrency researcher and programmer. Many people donated money to support the development of the system in what was one of the first initial coin offerings. The system came online on 30 July 2015.
+                <small>&nbsp&nbspFrom Wikipedia</small>
+            </p>
+            <div class="widget">
+                <iframe src="https://lunarcrush-widgets.firebaseapp.com/social?key=r1607sr8ls5ne9dvt4w0v&symbol=ETH&interval=1 Week&animation=false&theme=light" id="social-feed" frameBorder="0" border="0" cellspacing="0" scrolling="yes" style="width: 800px; height: 400px;"></iframe>
+            </div>
+        </div>
+
+        <div class="container_info">
+            <div class="container_info_item">
+                <h5>Learn About Ethereum</h5>
+                <a href="https://ethereum.org/en/" target="_blank"><img src="./images/ethereum-logo.png" alt="eth logo" width="230px" height=65px" style="margin-top: 20px;"></a>
+            </div>
+            <div class="container_info_item">
+                <h5>Ethereum News</h5>
+                <a href="https://cointelegraph.com/tags/ethereum" target="_blank"><img src="./images/newspaper.png" alt="newspaper" height="100px" width="100px"></a>
+            </div>
+            <div class="container_info_item">
+                <h5>Ethereum Reddit</h5>
+                <a href="https://www.reddit.com/r/ethereum/" target="_blank"><img src="./images/reddit.png" alt="reddit icon" height="100px" width="100px" style="margin-top: 3px;"></a>           
+            </div>
+        </div>
+    </main>   
+
+    <footer class="container_footer" style="background-color: #434875;">
+        <div class="footer_logo">
+            <div class="footer_logo_inner">
+                <img src="./images/logo.png" alt="logo" height="50px" width="50px">
+                <h5>Cryptocharts</h5>
+            </div>
+        </div>
+
+        <div id="footer_link_box">
+            <p style="margin-bottom: 0px; padding-top: 3px; font-size: 12px">Click one of these links</p>
+            <div class="container_footer_links">
+                <a href="./index.html"><img src="./images/bitcoin_logo.svg" alt="bitcoin logo" width="50px" height="50px"></a>
+                <a href="./ethereum.html"><img src="./images/ethereum.png" alt="ethereum logo" width="50px" height="50px"></a>
+                <a href="./litecoin.html"><img src="./images/litecoin.png" alt="litecoin logo" width="50px" height="50px"></a>
+                <a href="./dogecoin.html"><img src="./images/doge.jpg" alt="a doge" width="50px" height="50px"></a>
+            </div>
+        </div>
+
+        <div class="footer_stuff">
+            <p>❤️ Made by Mmackz for cs50x</p>
+        </div>
+    </footer>
+</body>
+</html>
