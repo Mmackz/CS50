@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <script>
+        let sharesRemaining =
+        {
+            {% for share in tickers %}
+            {{share.ticker}}: {{share.shares}},
+            {% endfor %}
+        };
+
+        function displayShares(id)
+        {
+            document.getElementById("shares-remaining").innerHTML = "Shares available: " + sharesRemaining[id];
+        }
+    </script>
+
+    <p>
+       Cash Balance: {{"$%.2f"|format(cash)}}
+    </p>
+    <form action="/sell" method="post">
+        <div class="form-group" id="symbol-dropdown">
+            <select class="form-control" name="symbol" onchange="displayShares(this.value);">
+                <option disabled selected value>Symbol</option>
+                {% for ticker in tickers %}
+                {% if ticker.shares > 0 %}
+                    <option value={{ticker.ticker}}>{{ticker.ticker}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id="shares-remaining">
+
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" id="sell" min="0" name="shares" placeholder="Shares" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+{% endblock %}
