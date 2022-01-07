@@ -19,7 +19,7 @@ notes as you want into each of the folders. Folders can be added and removed
 to keep notes organized.
 
 Notes are saved using the google storage API. The storage is persistant and unique to each 
-user which means the data remains if you close the borwser or rest the computer. 
+user which means the data remains if you close the browser or rest the computer. 
 You can access the notes by clicking on their respective folders. Each note can be removed 
 by pressing the red X in the top left corner. Once notes are saved, the user can quickly 
 and easily access important notes and web pages. 
